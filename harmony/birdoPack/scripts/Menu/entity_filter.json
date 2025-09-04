@@ -1,0 +1,50 @@
+{
+    "0-Atualizar_Animatic.js": {
+        "mode": ["STUDIO"],
+        "file_type": ["SHOT"],
+        "user_type": "ALL"
+    },
+    "1-Renderizar.js": {
+        "mode": ["SOLO", "STUDIO"],
+        "file_type": ["ASSET", "SHOT", null],
+        "user_type": "ALL"
+    },
+    "2-Publicar.js": {
+        "mode": ["STUDIO"],
+        "file_type": ["SHOT"],
+        "user_type": "ALL"
+    },
+    "3-Salvar_tpl.js": {
+        "mode": ["STUDIO"],
+        "file_type": ["ASSET"],
+        "user_type": "ALL"
+    },
+    "4-Importar_Assets.js": {
+        "mode": ["STUDIO"],
+        "file_type": ["ASSET", "SHOT"],
+        "user_type": "ALL"
+    },
+    "5-Criar_Note.js": {
+		"menu": "Notes",
+        "mode": ["STUDIO"],
+        "file_type": ["SHOT"],
+        "user_type": "LEAD"
+    },
+    "6-Enviar_Notes.js": {
+		"menu": "Notes",
+        "mode": ["STUDIO"],
+        "file_type": ["SHOT"],
+        "user_type": "LEAD"
+    },
+    "7-Importar_Notes.js": {
+		"menu": "Notes",
+        "mode": ["STUDIO"],
+        "file_type": ["SHOT"],
+        "user_type": "ALL"
+    },
+    "8-Atualizar_Setup.js": {
+        "mode": ["STUDIO"],
+        "file_type": ["ASSET", "SHOT"],
+        "user_type": "ALL"
+    }
+}

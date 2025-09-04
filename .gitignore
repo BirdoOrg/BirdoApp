@@ -1,0 +1,32 @@
+# Ignore system backup files
+*.db
+
+# Ignore pyc files
+*.pyc
+
+# python cache files
+*__pycache__/
+
+# virtual env
+venv/
+
+# Ignore Mac system files
+.DS_store
+
+# Ignore node_modules folder
+node_modules
+s
+# Ignore files related to API keys
+.env
+
+# Ignore SASS config files
+.sass-cache
+
+# ignore pycharm files
+.idea/
+
+# ignore extra folder
+extra/
+
+# ignore config file
+config.json
