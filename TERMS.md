@@ -1,6 +1,6 @@
 # Termos de Uso BirdoApp
 
-Última atualização: **04 de Setembro de 2025**
+Última atualização: **09 de Setembro de 2025**
 
 Bem-vindo ao BirdoApp! Estes Termos de Uso regulam a utilização do
 software open source BirdoApp, mantido pela Birdo.
