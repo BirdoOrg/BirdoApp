@@ -9,7 +9,7 @@ $GUM_FILE_MATCH    = "^gum_\d+\.\d+\.\d+_Windows_x86_64.zip$"
 $FFMPEG_REPO       = "BtbN/FFmpeg-Builds"
 $FFMPEG_FILE_MATCH = "^ffmpeg-master-latest-win64-gpl.zip$"
 
-$BIRDOAPP_REPO     = "otmbneto/BirdoApp"
+$BIRDOAPP_REPO     = "BirdoOrg/BirdoApp"
 
 ####################
 
