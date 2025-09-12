@@ -27,37 +27,37 @@ $uninstallChecklist = ""
 if($pythonInstall){
   $uninstallChecklist += (" - [ ] Desinstalar " + $pythonInstall.DisplayName + "`n")
 }else{
-  $uninstallChecklist += (" - [✓] Python 2.7 não encontrado." + "`n")
+  $uninstallChecklist += (" - [O] Python 2.7 não encontrado." + "`n")
 }
 
 if($env:TOONBOOM_GLOBAL_SCRIPT_LOCATION){
   $uninstallChecklist += (" - [ ] Remover a variável de ambiente TOONBOOM_GLOBAL_SCRIPT_LOCATION" + "`n")
 }else{
-  $uninstallChecklist += (" - [✓] Variável de ambiente TOONBOOM_GLOBAL_SCRIPT_LOCATION não existe." + "`n")
+  $uninstallChecklist += (" - [O] Variável de ambiente TOONBOOM_GLOBAL_SCRIPT_LOCATION não existe." + "`n")
 }
 
 if($desktopLink){
   $uninstallChecklist += (" - [ ] Remover atalho do BirdoApp da desktop" + "`n")
 }else{
-  $uninstallChecklist += (" - [✓] Não existe atalho do BirdoApp na desktop." + "`n")
+  $uninstallChecklist += (" - [O] Não existe atalho do BirdoApp na desktop." + "`n")
 }
 
 if($birdoAppFfmpegPath){
   $uninstallChecklist += (" - [ ] Remover caminho do conversor de vídeos ffmpeg da variável PATH." + "`n")
 }else{
-  $uninstallChecklist += (" - [✓] Caminho do conversor de vídeos ffmpeg não consta na variável PATH." + "`n")
+  $uninstallChecklist += (" - [O] Caminho do conversor de vídeos ffmpeg não consta na variável PATH." + "`n")
 }
 
 if($birdoAppFolder){
   $uninstallChecklist += (" - [ ] Remover pasta do BirdoApp" + "`n")
 }else{
-  $uninstallChecklist += (" - [✓] Pasta do BirdoApp não encontrada." + "`n")
+  $uninstallChecklist += (" - [O] Pasta do BirdoApp não encontrada." + "`n")
 }
 
 if($birdoAppTemp){
   $uninstallChecklist += (" - [ ] Remover pasta de arquivos temporários do BirdoApp" + "`n")
 }else{
-  $uninstallChecklist += (" - [✓] Pasta de arquivos temporários do BirdoApp não encontrada." + "`n")
+  $uninstallChecklist += (" - [O] Pasta de arquivos temporários do BirdoApp não encontrada." + "`n")
 }
 
 echo ("`n" +
@@ -98,37 +98,37 @@ if($pythonInstall){
 
   if((-not ($recheckPythonInstall -or $recheckpythonInstall32)) -and (Test-Path C:\Python27)){
     rm -Force -Recurse C:\Python27
-    echo " - [✓] Python 2.7 desinstalado"
+    echo " - [O] Python 2.7 desinstalado"
   }else{
-    echo " - [✘] Algo de errado na desinstalação do Python 2.7 desinstalado"
+    echo " - [X] Algo de errado na desinstalação do Python 2.7 desinstalado"
   }
 }
 
 if($env:TOONBOOM_GLOBAL_SCRIPT_LOCATION){
   [Environment]::SetEnvironmentVariable("TOONBOOM_GLOBAL_SCRIPT_LOCATION", $null, "User")
-  echo " - [✓] Variável de ambiente TOONBOOM_GLOBAL_SCRIPT_LOCATION removida"
+  echo " - [O] Variável de ambiente TOONBOOM_GLOBAL_SCRIPT_LOCATION removida"
 }
 
 if($desktopLink){
   rm $HOME\Desktop\BirdoApp.lnk
-  echo " - [✓] Atalho removido da desktop"
+  echo " - [O] Atalho removido da desktop"
 }
 
 if($birdoAppFfmpegPath){ # [environment]::GetEnvironmentVariable("Path")
   $newPathFfmpeg = [environment]::GetEnvironmentVariable("Path", "User").replace("$env:APPDATA\BirdoApp\extra\ffmpeg\windows\bin", "").replace(";;", ";") -replace "^;", ""
   [environment]::SetEnvironmentVariable("Path", $newPathFfmpeg, "User")
-  echo " - [✓] Caminho '$env:APPDATA\BirdoApp\extra\ffmpeg\windows\bin' removido da variável PATH"
+  echo " - [O] Caminho '$env:APPDATA\BirdoApp\extra\ffmpeg\windows\bin' removido da variável PATH"
 }
 
 if($birdoAppFolder){
   rm -Force -Recurse $env:APPDATA\BirdoApp
-  echo " - [✓] Arquivos do BirdoApp apagados"
+  echo " - [O] Arquivos do BirdoApp apagados"
 }
 
 if($birdoAppTemp){
   if(Test-Path $env:TEMP\BirdoApp){rm -Force -Recurse $env:TEMP\BirdoApp}
   if(Test-Path $env:TEMP\BirdoApp_update){rm -Force -Recurse $env:TEMP\BirdoApp_update}
-  echo " - [✓] Arquivos temporários do BirdoApp apagados"
+  echo " - [O] Arquivos temporários do BirdoApp apagados"
 }
 
 echo "BirdoApp desinstalado com sucesso."
